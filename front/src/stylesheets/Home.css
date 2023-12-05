@@ -1,0 +1,28 @@
+.paginateButtons {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.paginateButtons button {
+  font-size: 25px;
+  color: #fff;
+  margin: 20px;
+  letter-spacing: 1px;
+  background-color: #9f90ea;
+  padding: 12px 33px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: scale 0.3s ease-in-out, filter 0.3s ease-in-out;
+  font-weight: bold;
+  outline: 1px solid #fff;
+}
+
+.paginateButtons button:first-child {
+  background-color: #675cb0;
+}
+
+.paginateButtons button:hover {
+  scale: 1.1;
+  filter: sepia();
+}

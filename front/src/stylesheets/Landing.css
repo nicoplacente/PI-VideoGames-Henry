@@ -1,0 +1,175 @@
+.containerLanding {
+  background-color: #000;
+  height: 100vh;
+  display: flex;
+  z-index: -1;
+}
+
+.headerLanding {
+  height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  backdrop-filter: blur(12px);
+  background: #00002099;
+}
+
+h1 {
+  font-size: 120px;
+  background: linear-gradient(
+    135deg,
+    red,
+    blue,
+    deeppink,
+    blue,
+    red,
+    blue,
+    deeppink,
+    blue
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  letter-spacing: 3px;
+  background-size: 300% 300%;
+  font-weight: bold;
+  animation: changeColor 10s infinite alternate, letters 1s infinite alternate;
+}
+
+@keyframes letters {
+  0% {
+    letter-spacing: 0;
+  }
+  100% {
+    letter-spacing: 5px;
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.keyLanding {
+  animation: opacityLetters 3s infinite alternate;
+  color: #aaa;
+}
+
+@keyframes opacityLetters {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.keyLanding::after {
+  content: "";
+  animation: loaderContent 2s infinite linear both;
+}
+
+@keyframes loaderContent {
+  0% {
+    content: ".";
+  }
+  50% {
+    content: "..";
+  }
+  100% {
+    content: "...";
+  }
+}
+
+.slider {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slider ul {
+  display: flex;
+  width: 500%;
+  animation: sliderImg 15s infinite alternate ease-in-out;
+  height: 100%;
+}
+
+.slider li {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(120%);
+  opacity: 0.3;
+}
+
+@keyframes sliderImg {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+  75% {
+    margin-left: -300%;
+  }
+  85% {
+    margin-left: -300%;
+  }
+  90% {
+    margin-left: -400%;
+  }
+  100% {
+    margin-left: -400%;
+  }
+}
+
+@media (width < 600px) {
+  .headerLanding {
+    height: 100vh;
+    width: 100%;
+    background: #00002099;
+    border: 2px solid #fff;
+  }
+
+  h1 {
+    font-size: 67px;
+    font-weight: bold;
+  }
+
+  .slider {
+    display: none;
+  }
+}

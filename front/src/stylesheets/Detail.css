@@ -1,0 +1,195 @@
+/* .detailContainer {
+  display: flex;
+} */
+
+.detailContainer p {
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.detailContainer img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.detailContainer h1 {
+  text-align: center;
+}
+
+.detailInfoContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 16px;
+  /* grid-template-rows: repeat(3, auto); */
+  grid-template-rows: repeat(3, 200px);
+  grid-template-areas:
+    "id platforms description"
+    "rating released description"
+    "genres genres description";
+}
+
+.descriptionContainer {
+  overflow-y: scroll;
+  grid-area: description;
+  border-radius: 12px;
+  background-color: #9f90ea33;
+  box-shadow: 5px 12px 10px #0009;
+  cursor: pointer;
+  transition: background-color 0.9s;
+  padding: 12px;
+
+  &:hover {
+    background-color: #000010;
+  }
+}
+
+.descriptionContainer h3,
+.detailContainer h3 {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 12px;
+  color: #675cb0;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #000010;
+}
+
+.description {
+  font-size: 18px;
+  text-wrap: balance;
+  color: #f1f1f1;
+  letter-spacing: 1px;
+}
+
+.detailReleased {
+  grid-area: released;
+  border-radius: 12px;
+  background-color: #9f90ea33;
+  box-shadow: 5px 12px 10px #0009;
+  cursor: pointer;
+  transition: background-color 0.9s;
+  padding: 12px;
+
+  &:hover {
+    background-color: #000010;
+  }
+}
+
+.detailId {
+  grid-area: id;
+  border-radius: 12px;
+  background-color: #9f90ea33;
+  box-shadow: 5px 12px 10px #0009;
+  cursor: pointer;
+  transition: background-color 0.9s;
+  padding: 12px;
+
+  &:hover {
+    background-color: #000010;
+  }
+}
+
+.detailRating {
+  grid-area: rating;
+  border-radius: 12px;
+  background-color: #9f90ea33;
+  box-shadow: 5px 12px 10px #0009;
+  cursor: pointer;
+  transition: background-color 0.9s;
+  padding: 12px;
+
+  &:hover {
+    background-color: #000010;
+  }
+}
+
+.detailRating p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: auto;
+  font-size: 33px;
+}
+
+.detailGenres {
+  grid-area: genres;
+  border-radius: 12px;
+  background-color: #9f90ea33;
+  box-shadow: 5px 12px 10px #0009;
+  cursor: pointer;
+  transition: background-color 0.9s;
+  padding: 12px;
+
+  &:hover {
+    background-color: #000010;
+  }
+}
+
+.detailPlatforms {
+  grid-area: platforms;
+  border-radius: 12px;
+  background-color: #9f90ea33;
+  box-shadow: 5px 12px 10px #0009;
+  cursor: pointer;
+  transition: background-color 0.9s;
+  padding: 12px;
+
+  &:hover {
+    background-color: #000010;
+  }
+}
+
+.genresDetailMap {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.genresDetailMap p {
+  padding: 12px;
+  border-radius: 12px;
+  background-color: #9f90ea;
+  margin-top: 20px;
+}
+
+@media (width < 1450px) {
+  .detailInfoContainer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "id platforms "
+      "rating released "
+      "genres genres "
+      "description description";
+  }
+
+  .detailContainer h1 {
+    font-size: 77px;
+    padding: 20px 0;
+  }
+}
+
+@media (width < 605px) {
+  .detailInfoContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+      "id  "
+      "rating  "
+      "genres  "
+      "released "
+      "platforms "
+      "description ";
+  }
+  .detailContainer h1 {
+    font-size: 33px;
+    padding: 20px 0;
+  }
+}

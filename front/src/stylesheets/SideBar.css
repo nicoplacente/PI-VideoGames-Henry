@@ -1,0 +1,65 @@
+.sideBarRelative {
+  position: relative;
+  z-index: 10;
+}
+
+.sideBarContainer {
+  left: 0;
+  position: fixed;
+  background-color: #0009;
+  backdrop-filter: blur(12px);
+  top: 0;
+  left: -1000px;
+  padding: 0;
+  margin: 0;
+  width: 350px;
+  margin-top: 130px;
+  height: 100vh;
+  transition: left 1s ease-in-out;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  /* align-items: flex-start; */
+}
+
+.animate {
+  left: 0;
+}
+
+.navigateButtonsContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 12px 0 0 0;
+  border: 1px solid #fff9;
+}
+
+.buttonRoutes {
+  color: #fff;
+  cursor: pointer;
+  padding: 12px 20px;
+  font-size: 25px;
+  /* border-radius: 12px; */
+  transition: background-color 0.3s;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonRoutes:first-child {
+  background-color: #675cb0;
+}
+
+.buttonRoutes:nth-child(2) {
+  background-color: #2f2c79;
+}
+
+.buttonRoutes:nth-child(3) {
+  background-color: #171a4a;
+}
+
+.buttonRoutes:hover {
+  background-color: #9f90ea;
+}

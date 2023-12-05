@@ -1,0 +1,14 @@
+.error404Container {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.error404 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: hue-rotate(50deg);
+}

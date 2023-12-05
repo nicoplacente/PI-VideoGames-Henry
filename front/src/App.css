@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: American Captain;
+  border: none;
+  outline: none;
+  background: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: #000010;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+.Link {
+  text-decoration: none;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #675cb0;
+  border-radius: 12px;
+  transition: background-color 0.3s, visibility 0.3s;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #4b418a;
+}
+
+/* colores {
+
+  #000010
+  #171a4a
+  #2f2c79
+  #675cb0
+  #9f90ea
+} */
