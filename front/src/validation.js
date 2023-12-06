@@ -1,11 +1,14 @@
 const Validation = (input) => {
   let errors = {};
   const platformsRegex = /^[a-zA-Z0-9]+(?:,\s*[a-zA-Z0-9]+)*$/;
+  const nameRegex = /^[a-zA-Z0-9\_\-\s]{4,30}$/;
 
   if (!input.name) {
     errors.name = "Please enter a name";
   } else if (input.name.length >= 40) {
     errors.name = "Name should be less than 40 characters";
+  } else if (!nameRegex.test(input.name)) {
+    errors.name = "The name can only include letters and numbers";
   }
 
   if (!input.description) {
