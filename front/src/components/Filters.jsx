@@ -44,7 +44,6 @@ const Filters = () => {
   return (
     <div className="filtersContainer">
       <div>
-        <h4>Filters</h4>
         <div>
           <button value="created" onClick={handleCreatedButton}>
             Created

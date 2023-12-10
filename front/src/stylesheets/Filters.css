@@ -6,13 +6,14 @@
   padding: 12px;
 }
 
-.filtersContainer h4 {
+/* .filtersContainer h4 {
   letter-spacing: 1px;
   font-size: 33px;
-  margin: 12px 0;
+  margin: 12px auto;
   text-align: center;
   width: 100%;
-}
+  border: 2px solid #fff;
+} */
 
 .filtersContainer button,
 .filtersContainer select {
